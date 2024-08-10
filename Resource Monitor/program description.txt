@@ -1,0 +1,22 @@
+   The application aims to display real-time system resources such as: CPU
+usage, Memory Usage, Disk Space Usage, Battery Level and GPU, also the generated information is
+saved to an output text file where the user can access and view this data.
+Generated graphics can be saved in JPEG format.
+   The project starts with the creation of a function where the variables required for display are defined
+data in the system. For this I used the psutil module and the display made is below
+the form of a loading bar initially generated in the console for testing the function's functionality.
+  Refreshing the data was done by calling the function used and a
+arguments in a while, where we defined a global variable alpha, also used for stopping
+program from the graphical interface; the refresh time being set to one second.
+  The next step was to write the information into a txt file and make the part
+graphs. For this purpose, it was necessary to import the matplotlib and tkinter modules.
+  The graphs were made in matplotlib, and then integrated into tkinter using
+FiguresCanvasTkAgg.
+  Four classes were created, the first being for opening the main window,
+then the StartPage where I created navigation buttons between frames, but also a stop button
+of the program.
+  Back to Home buttons have been created to return to the main menu,
+but also the button to go to Page Two, which opens the graphics viewing window
+for disk. Through matplotlib the animations were created and later entered into
+tkinter with the buttons generated from the initial display (save graphics as
+jpeg).
